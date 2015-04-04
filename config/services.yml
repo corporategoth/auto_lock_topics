@@ -1,0 +1,32 @@
+services:
+    prez.auto_lock_topics.acplistener:
+        class: prez\auto_lock_topics\event\acplistener
+        arguments:
+            - @controller.helper
+            - @user
+        tags:
+            - { name: event.listener }
+
+    prez.auto_lock_topics.cron.task.core.auto_lock_all_forums:
+        class: prez\auto_lock_topics\cron\task\core\auto_lock_all_forums
+        arguments:
+            - %core.root_path%
+            - %core.php_ext%
+            - @config
+            - @dbal.conn
+        calls:
+            - [set_name, [cron.task.core.auto_lock_all_forums]]
+        tags:
+            - { name: cron.task }
+
+    prez.auto_lock_topics.cron.task.core.auto_lock_forum:
+        class: prez\auto_lock_topics\cron\task\core\auto_lock_forum
+        arguments:
+            - %core.root_path%
+            - %core.php_ext%
+            - @config
+            - @dbal.conn
+        calls:
+            - [set_name, [cron.task.core.auto_lock_forum]]
+        tags:
+            - { name: cron.task }

@@ -1,0 +1,35 @@
+		</fieldset>
+		<fieldset>
+			<legend>{L_FORUM_AUTO_LOCK_SETTINGS}</legend>
+		<dl>
+			<dt><label for="enable_auto_lock">{L_FORUM_AUTO_LOCK}{L_COLON}</label><br /><span>{L_FORUM_AUTO_LOCK_EXPLAIN}</span></dt>
+			<dd><label><input type="radio" class="radio" name="enable_auto_lock" value="1"<!-- IF S_AUTO_LOCK_ENABLE --> id="enable_auto_lock" checked="checked"<!-- ENDIF --> /> {L_YES}</label>
+				<label><input type="radio" class="radio" name="enable_auto_lock" value="0"<!-- IF not S_AUTO_LOCK_ENABLE --> id="enable_auto_lock" checked="checked"<!-- ENDIF --> /> {L_NO}</label></dd>
+		</dl>
+		<dl>
+			<dt><label for="auto_lock_freq">{L_AUTO_LOCK_FREQ}{L_COLON}</label><br /><span>{L_AUTO_LOCK_FREQ_EXPLAIN}</span></dt>
+			<dd><input type="number" id="auto_lock_freq" name="auto_lock_freq" value="{AUTO_LOCK_FREQ}" maxlength="4" size="4" min="0" max="9999" /> {L_DAYS}</dd>
+		</dl>
+		<dl>
+			<dt><label for="auto_lock_days">{L_AUTO_LOCK_DAYS}{L_COLON}</label><br /><span>{L_AUTO_LOCK_DAYS_EXPLAIN}</span></dt>
+			<dd><input type="number" id="auto_lock_days" name="auto_lock_days" value="{AUTO_LOCK_DAYS}" maxlength="4" size="4" min="0" max="9999" /> {L_DAYS}</dd>
+		</dl>
+		<dl>
+			<dt><label for="auto_lock_viewed">{L_AUTO_LOCK_VIEWED}{L_COLON}</label><br /><span>{L_AUTO_LOCK_VIEWED_EXPLAIN}</span></dt>
+			<dd><input type="number" id="auto_lock_viewed" name="auto_lock_viewed" value="{AUTO_LOCK_VIEWED}" maxlength="4" size="4" min="0" max="9999" /> {L_DAYS}</dd>
+		</dl>
+		<dl>
+			<dt><label for="auto_lock_old_polls">{L_AUTO_LOCK_OLD_POLLS}{L_COLON}</label><br /><span>{L_AUTO_LOCK_OLD_POLLS_EXPLAIN}</span></dt>
+			<dd><label><input type="radio" class="radio" name="auto_lock_old_polls" value="1"<!-- IF S_AUTO_LOCK_OLD_POLLS --> id="auto_lock_old_polls" checked="checked"<!-- ENDIF --> /> {L_YES}</label>
+				<label><input type="radio" class="radio" name="auto_lock_old_polls" value="0"<!-- IF not S_AUTO_LOCK_OLD_POLLS --> id="auto_lock_old_polls" checked="checked"<!-- ENDIF --> /> {L_NO}</label></dd>
+		</dl>
+		<dl>
+			<dt><label for="auto_lock_announce">{L_AUTO_LOCK_ANNOUNCEMENTS}{L_COLON}</label></dt>
+			<dd><label><input type="radio" class="radio" name="auto_lock_announce" value="1"<!-- IF S_AUTO_LOCK_ANNOUNCE --> id="auto_lock_announce" checked="checked"<!-- ENDIF --> /> {L_YES}</label>
+				<label><input type="radio" class="radio" name="auto_lock_announce" value="0"<!-- IF not S_AUTO_LOCK_ANNOUNCE --> id="auto_lock_announce" checked="checked"<!-- ENDIF --> /> {L_NO}</label></dd>
+		</dl>
+		<dl>
+			<dt><label for="auto_lock_sticky">{L_AUTO_LOCK_STICKY}{L_COLON}</label></dt>
+			<dd><label><input type="radio" class="radio" name="auto_lock_sticky" value="1"<!-- IF S_AUTO_LOCK_STICKY --> id="auto_lock_sticky" checked="checked"<!-- ENDIF --> /> {L_YES}</label>
+				<label><input type="radio" class="radio" name="auto_lock_sticky" value="0"<!-- IF not S_AUTO_LOCK_STICKY --> id="auto_lock_sticky" checked="checked"<!-- ENDIF --> /> {L_NO}</label></dd>
+		</dl>

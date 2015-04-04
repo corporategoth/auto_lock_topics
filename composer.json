@@ -1,0 +1,29 @@
+{
+	"name": "prez/auto_lock_topics",
+	"type": "phpbb-extension",
+	"description": "Perform actions on users when they exceed certain thresholds.",
+	"homepage": "",
+	"version": "0.1",
+	"time": "2015-03-29",
+	"license": "GPL-2.0",
+	"authors": [
+		{
+			"name": "Preston A. Elder",
+			"email": "prez@goth.net",
+			"homepage": "http://www.goth.net",
+			"role": "Lead Developer"
+		}
+	],
+	"require": {
+		"php": ">=5.3"
+	},
+	"require-dev": {
+		"phpbb/epv": "dev-master"
+	},
+	"extra": {
+		"display-name": "Auto-Lock Topics",
+		"soft-require": {
+			"phpbb/phpbb": ">=3.1.0-RC2,<3.2.*@dev"
+		},
+	}
+}
