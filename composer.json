@@ -1,5 +1,5 @@
 {
-	"name": "prez/auto_lock_topics",
+	"name": "prez/autolocktopics",
 	"type": "phpbb-extension",
 	"description": "Perform actions on users when they exceed certain thresholds.",
 	"homepage": "",

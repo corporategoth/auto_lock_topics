@@ -1,14 +1,14 @@
 services:
-    prez.auto_lock_topics.acplistener:
-        class: prez\auto_lock_topics\event\acplistener
+    prez.autolocktopics.acplistener:
+        class: prez\autolocktopics\event\acplistener
         arguments:
             - @controller.helper
             - @user
         tags:
             - { name: event.listener }
 
-    prez.auto_lock_topics.cron.task.core.auto_lock_all_forums:
-        class: prez\auto_lock_topics\cron\task\core\auto_lock_all_forums
+    prez.autolocktopics.cron.task.core.auto_lock_all_forums:
+        class: prez\autolocktopics\cron\task\core\auto_lock_all_forums
         arguments:
             - %core.root_path%
             - %core.php_ext%
@@ -19,8 +19,8 @@ services:
         tags:
             - { name: cron.task }
 
-    prez.auto_lock_topics.cron.task.core.auto_lock_forum:
-        class: prez\auto_lock_topics\cron\task\core\auto_lock_forum
+    prez.autolocktopics.cron.task.core.auto_lock_forum:
+        class: prez\autolocktopics\cron\task\core\auto_lock_forum
         arguments:
             - %core.root_path%
             - %core.php_ext%

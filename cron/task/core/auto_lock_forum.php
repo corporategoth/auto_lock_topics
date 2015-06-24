@@ -11,7 +11,7 @@
 *
 */
 
-namespace prez\auto_lock_topics\cron\task\core;
+namespace prez\autolocktopics\cron\task\core;
 
 /**
 * Prune one forum cron task.
@@ -70,19 +70,19 @@ class auto_lock_forum extends \phpbb\cron\task\base implements \phpbb\cron\task\
 	*/
 	public function run()
 	{
-		if (!function_exists('auto_lock_topics'))
+		if (!function_exists('autolocktopics'))
 		{
-			include($this->phpbb_root_path . 'ext/prez/auto_lock_topics/includes/functions_admin.' . $this->php_ext);
+			include($this->phpbb_root_path . 'ext/prez/autolocktopics/includes/functions_admin.' . $this->php_ext);
 		}
 
 		if ($this->forum_data['auto_lock_days'])
 		{
-			auto_lock_topics($this->forum_data['forum_id'], 'posted', $this->forum_data['auto_lock_flags'], $this->forum_data['auto_lock_days'], $this->forum_data['auto_lock_freq']);
+			autolocktopics($this->forum_data['forum_id'], 'posted', $this->forum_data['auto_lock_flags'], $this->forum_data['auto_lock_days'], $this->forum_data['auto_lock_freq']);
 		}
 
 		if ($this->forum_data['auto_lock_viewed'])
 		{
-			auto_lock_topics($this->forum_data['forum_id'], 'viewed', $this->forum_data['auto_lock_flags'], $this->forum_data['auto_lock_viewed'], $this->forum_data['auto_lock_freq']);
+			autolocktopics($this->forum_data['forum_id'], 'viewed', $this->forum_data['auto_lock_flags'], $this->forum_data['auto_lock_viewed'], $this->forum_data['auto_lock_freq']);
 		}
 	}
 

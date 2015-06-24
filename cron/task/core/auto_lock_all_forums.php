@@ -11,7 +11,7 @@
 *
 */
 
-namespace prez\auto_lock_topics\cron\task\core;
+namespace prez\autolocktopics\cron\task\core;
 
 /**
 * Prune all forums cron task.
@@ -50,9 +50,9 @@ class auto_lock_all_forums extends \phpbb\cron\task\base
 	*/
 	public function run()
 	{
-		if (!function_exists('auto_lock_topics'))
+		if (!function_exists('autolocktopics'))
 		{
-			include($this->phpbb_root_path . 'ext/prez/auto_lock_topics/includes/functions_admin.' . $this->php_ext);
+			include($this->phpbb_root_path . 'ext/prez/autolocktopics/includes/functions_admin.' . $this->php_ext);
 		}
 
 		$sql = 'SELECT forum_id, auto_lock_next, enable_auto_lock, auto_lock_days, auto_lock_viewed, auto_lock_flags, auto_lock_freq
@@ -64,12 +64,12 @@ class auto_lock_all_forums extends \phpbb\cron\task\base
 		{
 			if ($row['auto_lock_days'])
 			{
-				auto_lock_topics($row['forum_id'], 'posted', $row['auto_lock_flags'], $row['auto_lock_days'], $row['auto_lock_freq']);
+				autolocktopics($row['forum_id'], 'posted', $row['auto_lock_flags'], $row['auto_lock_days'], $row['auto_lock_freq']);
 			}
 
 			if ($row['auto_lock_viewed'])
 			{
-				auto_lock_topics($row['forum_id'], 'viewed', $row['auto_lock_flags'], $row['auto_lock_viewed'], $row['auto_lock_freq']);
+				autolocktopics($row['forum_id'], 'viewed', $row['auto_lock_flags'], $row['auto_lock_viewed'], $row['auto_lock_freq']);
 			}
 		}
 		$this->db->sql_freeresult($result);
