@@ -7,14 +7,14 @@
 *
 */
 
-namespace prez\auto_lock_topics\migrations;
+namespace prez\autolocktopics\migrations;
 
 class release_0_1 extends \phpbb\db\migration\migration
 {
 	public function update_data()
 	{
 		return array(
-			array('config.add', array('auto_lock_topics_version', '0.1')),
+			array('config.add', array('autolocktopics_version', '0.1')),
 		);
 	}
 

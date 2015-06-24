@@ -75,9 +75,9 @@ function lock_topics($forum_id, $auto_lock_mode, $auto_lock_date, $auto_lock_fla
 }
 
 /**
-* Function auto_lock_topics(), this function now relies on passed vars
+* Function autolocktopics(), this function now relies on passed vars
 */
-function auto_lock_topics($forum_id, $auto_lock_mode, $auto_lock_flags, $auto_lock_days, $auto_lock_freq)
+function autolocktopics($forum_id, $auto_lock_mode, $auto_lock_flags, $auto_lock_days, $auto_lock_freq)
 {
 	global $db;
 

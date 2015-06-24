@@ -9,7 +9,7 @@
 *
 */
 
-namespace prez\auto_lock_topics\event;
+namespace prez\autolocktopics\event;
 
 /**
 * Event listener
